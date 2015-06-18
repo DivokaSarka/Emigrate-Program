@@ -1,0 +1,22 @@
+program Project1;
+
+uses
+  lcl.Forms,
+  Unit1 in 'Unit1.pas' {Main},
+  Unit2 in 'Unit2.pas' {Add},
+  Unit3 in 'Unit3.pas' {Help},
+  Unit4 in 'Unit4.pas' {About},
+  Unit5 in 'Unit5.pas' {Statistic};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TMain, Main);
+  Application.CreateForm(TAdd, Add);
+  Application.CreateForm(THelp, Help);
+  Application.CreateForm(TAbout, About);
+  Application.CreateForm(TStatistic, Statistic);
+  Application.Run;
+end.

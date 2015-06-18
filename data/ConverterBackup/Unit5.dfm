@@ -1,0 +1,96 @@
+object Statistic: TStatistic
+  Left = 0
+  Top = 0
+  Caption = #1057#1090#1072#1090#1080#1089#1090#1080#1095#1077#1089#1082#1080#1077' '#1076#1072#1085#1085#1099#1077
+  ClientHeight = 348
+  ClientWidth = 504
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Chart1: TChart
+    Left = 0
+    Top = 0
+    Width = 504
+    Height = 348
+    Title.Text.Strings = (
+      'TChart')
+    Pages.MaxPointsPerPage = 4
+    View3DOptions.Elevation = 315
+    View3DOptions.Orthogonal = False
+    View3DOptions.Perspective = 0
+    View3DOptions.Rotation = 360
+    Align = alClient
+    TabOrder = 0
+    ExplicitLeft = 8
+    ExplicitTop = 16
+    DefaultCanvas = 'TGDIPlusCanvas'
+    ColorPaletteIndex = 13
+    object Label1: TLabel
+      Left = 352
+      Top = 320
+      Width = 100
+      Height = 28
+      Caption = #1043#1088#1072#1092#1080#1082' - '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -23
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+    object DataSeries: TPieSeries
+      XValues.Order = loAscending
+      YValues.Name = 'Pie'
+      YValues.Order = loNone
+      Frame.InnerBrush.BackColor = clRed
+      Frame.InnerBrush.Gradient.EndColor = clGray
+      Frame.InnerBrush.Gradient.MidColor = clWhite
+      Frame.InnerBrush.Gradient.StartColor = 4210752
+      Frame.InnerBrush.Gradient.Visible = True
+      Frame.MiddleBrush.BackColor = clYellow
+      Frame.MiddleBrush.Gradient.EndColor = 8553090
+      Frame.MiddleBrush.Gradient.MidColor = clWhite
+      Frame.MiddleBrush.Gradient.StartColor = clGray
+      Frame.MiddleBrush.Gradient.Visible = True
+      Frame.OuterBrush.BackColor = clGreen
+      Frame.OuterBrush.Gradient.EndColor = 4210752
+      Frame.OuterBrush.Gradient.MidColor = clWhite
+      Frame.OuterBrush.Gradient.StartColor = clSilver
+      Frame.OuterBrush.Gradient.Visible = True
+      Frame.Width = 4
+      OtherSlice.Legend.Visible = False
+      Data = {
+        04080000000000000000B88340FF04000000436172730000000000288240FF06
+        00000050686F6E65730000000000288440FF060000005461626C657300000000
+        00807340FF080000004D6F6E69746F72730000000000988240FF050000004C61
+        6D70730000000000A88E40FF090000004B6579626F6172647300000000008064
+        40FF0500000042696B65730000000000208540FF06000000436861697273}
+    end
+  end
+  object Button1: TButton
+    Left = 479
+    Top = 146
+    Width = 25
+    Height = 57
+    Caption = '>'
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 0
+    Top = 146
+    Width = 25
+    Height = 57
+    Caption = '<'
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+end

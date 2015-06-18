@@ -1,0 +1,52 @@
+object Help: THelp
+  Left = 0
+  Top = 0
+  BorderStyle = bsToolWindow
+  Caption = 'Справка'
+  ClientHeight = 94
+  ClientWidth = 470
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnClose = FormClose
+  PixelsPerInch = 96
+  TextHeight = 13
+  object RichEdit1: TRichEdit
+    AlignWithMargins = True
+    Left = 3
+    Top = 3
+    Width = 464
+    Height = 88
+    Align = alClient
+    BorderStyle = bsNone
+    Color = clWhite
+    Enabled = False
+    Font.Charset = RUSSIAN_CHARSET
+    Font.Color = clWindowText
+    Font.Height = -11
+    Font.Name = 'Tahoma'
+    Font.Style = []
+    Lines.Strings = (
+      
+        '   Для добавления новых данных щелкните на "Добавить" под главно' +
+        'й таблицей, '
+      'заполните необходимые поля и нажмите на кнопку "Сохранить".'
+      
+        '   Обновление базы данных проводится только при выходе из програ' +
+        'ммы, либо '
+      'принудительно из меню. Закрывая программу сохраняйте БД.'
+      
+        '   Основная таблица поддерживает "быстрое изменение", вызываемое' +
+        ' двойным щелчком '
+      'мыши.')
+    ParentFont = False
+    ReadOnly = True
+    TabOrder = 0
+    Zoom = 100
+  end
+end

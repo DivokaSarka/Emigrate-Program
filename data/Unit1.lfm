@@ -1,0 +1,159 @@
+object Main: TMain
+  Left = 0
+  Top = 0
+  Caption = 'Эмиграция населения'
+  ClientHeight = 347
+  ClientWidth = 742
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  Position = poDesktopCenter
+  OnActivate = FormActivate
+  OnCloseQuery = FormCloseQuery
+  OnCreate = FormCreate
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Panel1: TPanel
+    Left = 0
+    Top = 312
+    Width = 742
+    Height = 35
+    Align = alBottom
+    TabOrder = 0
+    object Label1: TLabel
+      AlignWithMargins = True
+      Left = 493
+      Top = 7
+      Width = 82
+      Height = 24
+      Margins.Top = 6
+      Align = alRight
+      Caption = 'Сортировать по'
+      ExplicitHeight = 13
+    end
+    object Button1: TButton
+      AlignWithMargins = True
+      Left = 4
+      Top = 4
+      Width = 75
+      Height = 27
+      Align = alLeft
+      Caption = 'Добавить'
+      TabOrder = 0
+      OnClick = Button1Click
+    end
+    object Button2: TButton
+      AlignWithMargins = True
+      Left = 85
+      Top = 4
+      Width = 75
+      Height = 27
+      Align = alLeft
+      Caption = 'Изменить'
+      TabOrder = 1
+      OnClick = Button2Click
+    end
+    object Button3: TButton
+      AlignWithMargins = True
+      Left = 166
+      Top = 4
+      Width = 75
+      Height = 27
+      Align = alLeft
+      Caption = 'Удалить'
+      TabOrder = 2
+      OnClick = Button3Click
+    end
+    object ComboBox1: TComboBox
+      AlignWithMargins = True
+      Left = 581
+      Top = 4
+      Width = 145
+      Height = 21
+      Margins.Right = 15
+      Align = alRight
+      Style = csDropDownList
+      CharCase = ecUpperCase
+      ItemIndex = 0
+      TabOrder = 3
+      Text = 'ДАТЕ ЭМИГРАЦИИ'
+      OnChange = ComboBox1Change
+      Items.Strings = (
+        'ДАТЕ ЭМИГРАЦИИ'
+        'ФАМИЛИИ'
+        'ПОЛУ'
+        'ВОЗРАСТУ'
+        'НАЦИОНАЛЬНОСТИ'
+        'СТРАНЕ')
+    end
+  end
+  object StringGrid1: TStringGrid
+    Left = 0
+    Top = 0
+    Width = 742
+    Height = 312
+    Align = alClient
+    ColCount = 6
+    DefaultColWidth = 30
+    DefaultRowHeight = 25
+    RowCount = 2
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
+    TabOrder = 1
+    OnDblClick = StringGrid1DblClick
+    ColWidths = (
+      30
+      289
+      39
+      122
+      100
+      123)
+  end
+  object StringGrid2: TStringGrid
+    Left = 8
+    Top = 241
+    Width = 713
+    Height = 65
+    ColCount = 6
+    DefaultColWidth = 30
+    DefaultRowHeight = 25
+    RowCount = 2
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goRangeSelect, goRowSelect]
+    TabOrder = 2
+    Visible = False
+    ColWidths = (
+      30
+      289
+      39
+      122
+      100
+      123)
+  end
+  object MainMenu1: TMainMenu
+    Left = 688
+    Top = 16
+    object N1: TMenuItem
+      Caption = 'База данных'
+      object N2: TMenuItem
+        Caption = 'Сохранить'
+        OnClick = N2Click
+      end
+    end
+    object N6: TMenuItem
+      Caption = 'Анализ'
+      OnClick = N6Click
+    end
+    object N8: TMenuItem
+      Caption = 'Справка'
+      OnClick = N8Click
+    end
+    object N9: TMenuItem
+      Caption = 'О программе'
+      OnClick = N9Click
+    end
+  end
+end
